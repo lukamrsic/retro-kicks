@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unos novog modela</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>RETRO KICKS</h1>
+<p>Dodavanje novog članka</p>
+</header>
+
+<nav>
+    <a href="index.php">Početna</a>
+    <a href="kategorija.php?id=Retro">Retro</a>
+    <a href="kategorija.php?id=Basketball">Basketball</a>
+    <a href="unos.html">Unos</a>
+    <a href="administrator.php">Administracija</a>
+</nav>
+
+<main style="padding:40px;">
+<form name="unos" action="skripta.php" method="POST" enctype="multipart/form-data">
+
+<p>Naslov</p>
+<input type="text" name="title" required>
+
+<p>Kratki sažetak</p>
+<textarea name="about" rows="4" required></textarea>
+
+<p>Sadržaj</p>
+<textarea name="content" rows="8" required></textarea>
+
+<p>Kategorija</p>
+<select name="category">
+<option value="Retro">Retro</option>
+<option value="Basketball">Basketball</option>
+<option value="Streetwear">Streetwear</option>
+</select>
+
+<p>Slika</p>
+<input type="file" name="pphoto">
+
+<p>
+<input type="checkbox" name="archive">
+ Prikaži na stranici
+</p>
+
+<br>
+<button type="reset">Poništi</button>
+<button type="submit">Pošalji</button>
+
+</form>
+</main>
+
+<footer>
+<p>Retro Kicks Archive</p>
+</footer>
+</body>
+</html>
